@@ -1,0 +1,27 @@
+.bottomline {
+  --line-height: 1rem;
+  --line-width: 0.1875rem;
+}
+
+.bottomline {
+  @apply before:absolute
+    before:bottom-[calc(var(--line-height)*-1)]
+    before:left-1/2
+    before:z-10
+    before:h-[var(--line-height)]
+    before:w-[var(--line-width)]
+    before:-translate-x-1/2
+    before:rounded-16
+    before:bg-white
+    before:content-['']
+    after:absolute
+    after:bottom-[calc(var(--line-height)*-1.2)]
+    after:left-1/2
+    after:h-[calc(var(--line-width)*2)]
+    after:w-[calc(var(--line-width)*2)]
+    after:-translate-x-1/2
+    after:rotate-90
+    after:rounded-full
+    after:bg-black
+    after:content-[''];
+}
